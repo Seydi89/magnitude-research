@@ -22,15 +22,6 @@ pytest
 magresearch list
 ```
 
-Alternatively:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e '.[dev]'
-pytest
-```
-
 ## Run smoke experiments
 
 ```bash

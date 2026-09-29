@@ -1,0 +1,9 @@
+[
+  {"id":"synthetic-memory-selection","status":"negative","question":"Does magnitude improve evidence selection under token budgets?","result":"Magnitude did not beat relevance; MMR matched or exceeded it.","runner":"experiments/memory_selection/run_smoke.py"},
+  {"id":"history-retrieval","status":"mixed","question":"Does conversational history improve retrieval, and does magnitude add further value?","result":"History substantially helped retrieval; magnitude added no measurable selection gain.","runner":"experiments/history/run_smoke.py"},
+  {"id":"scope-adaptive-scales","status":"inconclusive","question":"Can narrowing/broadening signals choose useful magnitude scales?","result":"Alignment was fixed, but adaptive scales did not clearly beat a fixed scale.","runner":"experiments/scope/run_smoke.py"},
+  {"id":"profile-information","status":"negative","question":"Does the full magnitude profile add information beyond similarity geometry?","result":"Profiles were predictive, but did not decisively exceed strong similarity/geometry controls.","runner":"experiments/profile/run_smoke.py"},
+  {"id":"controlled-dedup","status":"mixed","question":"Can magnitude remove copies while preserving complementary evidence?","result":"Useful only under controlled redundancy; semantic aspect coverage was substantially stronger.","runner":"experiments/dedup/run_smoke.py"},
+  {"id":"catastrophic-forgetting","status":"feasibility","question":"Can magnitude drift warn of later forgetting?","result":"Early-layer profile drift correlated with forgetting in one run, but displacement was stronger.","runner":"experiments/forgetting/run_pilot.py"}
+]
+

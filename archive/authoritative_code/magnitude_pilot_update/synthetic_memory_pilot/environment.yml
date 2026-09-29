@@ -1,0 +1,18 @@
+# Conda environment for history_magnitude_pilot + synthetic_memory_pilot (LSA and MiniLM).
+# Scientific stack pinned to the versions that reproduced all LSA results exactly.
+# If conda cannot resolve an exact pin, relax it to the range in the comment.
+name: magnitude-pilot
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12        # >=3.11
+  - numpy=2.4.4        # >=1.26,<3
+  - scipy=1.17.1       # >=1.11,<2
+  - scikit-learn=1.8.0 # >=1.4,<2
+  - threadpoolctl=3.6.0
+  - matplotlib=3.10.8  # only needed for the original project's report plots
+  - pip
+  - pip:               # MiniLM encoder (same ranges as the project's requirements-minilm.txt)
+      - onnxruntime>=1.18,<2
+      - tokenizers>=0.20,<1
+      - huggingface-hub>=0.25,<1

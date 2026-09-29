@@ -15,14 +15,14 @@ Metric-space magnitude was a plausible candidate. It measures the effective size
 For a set of embedded memories `X` with pairwise distances `d(i,j)`, define the similarity matrix
 
 ```math
-Z_{ij}(t) = \exp\left(-t\,d(i,j)\right).
+Z_{ij}(t) = e^{-t d(i,j)}.
 ```
 
 The magnitude at scale `t` is
 
 ```math
-\operatorname{Mag}_t(X)
-= \mathbf{1}^{\mathsf{T}} Z(t)^{-1} \mathbf{1}.
+\mathrm{Mag}_t(X)
+= \mathbf{1}^{T} Z(t)^{-1} \mathbf{1}.
 ```
 
 The scale parameter `t` controls the resolution at which distances are considered. At small values of `t`, more points appear similar and the magnitude approaches one. As `t` increases, only nearby points remain similar and distinct points contribute more independently. Evaluating magnitude across a range of scales produces a **magnitude profile**, rather than a single diversity score.

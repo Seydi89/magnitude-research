@@ -2,7 +2,7 @@
 
 A cleaned consolidation of the completed pilots on metric-space magnitude in conversational memory and continual learning. This repository preserves meaningful positive, negative, and inconclusive experiments without retaining duplicate generations of old scripts.
 
-**[Read the full research report](REPORT.md)** for the experimental results, interpretation, and limitations.
+**[Full report](REPORT.md)**
 
 ## What is here
 

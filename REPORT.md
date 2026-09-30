@@ -2,7 +2,7 @@
 
 This report documents a series of experiments on a simple question: can metric-space magnitude improve which memories a conversational system keeps under a token budget?
 
-The answer from these pilots is mostly no. Conversational history helped retrieval, and explicit semantic coverage helped when several pieces of evidence were required. Magnitude itself did not improve selection over strong, simpler baselines. I am keeping the project because the negative result is useful and the experiments clarify why the original idea was not enough.
+The answer from these pilots is mostly no. Conversational history helped retrieval, and explicit semantic coverage helped when several pieces of evidence were required. Magnitude itself did not improve selection over strong, simpler baselines. 
 
 ## Starting point
 
@@ -85,9 +85,9 @@ Second, geometric distinctiveness is not the same as usefulness. Magnitude can i
 
 Third, the pure geometric objective has a strong distance preference. Starting from one selected memory, the unregularized two-point marginal gain is
 
-\[
-\tanh(td/2),
-\]
+```math
+\tanh\left(\frac{td}{2}\right),
+```
 
 which increases with distance at every scale. With equal costs and no relevance term, the next choice is therefore the farthest eligible candidate. Scale weighting changes the strength of this preference, not its direction. The complete hybrid selector also includes relevance and token cost, so this observation does not determine every selection it makes.
 
